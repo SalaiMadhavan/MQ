@@ -1,0 +1,453 @@
+{
+  "domain": "messaging",
+  "archiveType": "installation",
+  "archiveName": "Installation1",
+  "version": "9.0.2.0",
+  "complexityRules": [
+    {
+      "id": "dns",
+      "name": "DNS Reconfiguration",
+      "description": "Issues that require DNS reconfiguration",
+      "complexityContribution": "simple",
+      "issues": [
+        "MQCL01"
+      ]
+    },
+    {
+      "id": "cluster",
+      "name": "Cluster Reconfiguration",
+      "description": "Issues that require cluster reconfiguration",
+      "complexityContribution": "moderate",
+      "issuesCategory": [
+        "cluster"
+      ]
+    },
+    {
+      "id": "exits",
+      "name": "Changing Custom Logic",
+      "description": "Issues that require changing custom logic",
+      "complexityContribution": "moderate",
+      "issuesCategory": [
+        "exits"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Client authentication reconfiguration",
+      "description": "Issues that require client authentication reconfiguration",
+      "complexityContribution": "complex",
+      "issues": [
+        "MQSEC01"
+      ]
+    }
+  ],
+  "issueCategories": {
+    "security": {
+      "title": "Authentication considerations"
+    },
+    "exits": {
+      "title": "Exit and custom binary considerations"
+    },
+    "cluster": {
+      "title": "Cluster considerations"
+    }
+  },
+  "assessmentUnits": [
+    {
+      "name": "TRANS_ADV_QM",
+      "targets": [
+        {
+          "version": "9.1.0.0",
+          "platform": "ICP",
+          "location": "Private",
+          "runtime": "liberty",
+          "valid": "true",
+          "issues": {
+            "security": [
+              {
+                "id": "MQSEC01",
+                "title": "Authentication configured for OS groups. Determine target authentication mechanism.",
+                "cost": 2.4,
+                "issueOverhead": 2.0,
+                "occurrencesCost": 0.2,
+                "complexityRule": "security",
+                "solutionText": [
+                  "Consider impact to clients",
+                  "Alternatives:",
+                  "(1) Port OS config: Migrate Users, Passwords and Groups to the container environment.",
+                  "(2) Adopt LDAP: Configure migrated Queue Manager to use LDAP instead of Operating System based authentication"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "type": "Destination Type",
+                  "object": "Object",
+                  "osObjectType": "OS Object Type",
+                  "osObjectName": "OS Object Name"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "type": "queue",
+                    "object": "TRANS_ADV_QM",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "mqm"
+                  },
+                  {
+                    "type": "queue",
+                    "object": "TRANS_ADV_QM",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "root"
+                  }
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "complexity": {
+              "complex": {
+                "security": 1
+              },
+              "score": "complex"
+            },
+            "issues": {
+              "warning": 1
+            },
+            "effort": {
+              "security": 2.4,
+              "total": 2.4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sampleQM",
+      "targets": [
+        {
+          "version": "9.1.0.0",
+          "platform": "ICP",
+          "location": "Private",
+          "runtime": "liberty",
+          "valid": "true",
+          "issues": {
+            "security": [
+              {
+                "id": "MQSEC01",
+                "title": "Authentication configured for OS groups. Determine target authentication mechanism.",
+                "cost": 2.4,
+                "issueOverhead": 2.0,
+                "occurrencesCost": 0.2,
+                "complexityRule": "security",
+                "solutionText": [
+                  "Consider impact to clients",
+                  "Alternatives:",
+                  "(1) Port OS config: Migrate Users, Passwords and Groups to the container environment.",
+                  "(2) Adopt LDAP: Configure migrated Queue Manager to use LDAP instead of Operating System based authentication"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "type": "Destination Type",
+                  "object": "Object",
+                  "osObjectType": "OS Object Type",
+                  "osObjectName": "OS Object Name"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "type": "queue",
+                    "object": "sampleQM",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "mqm"
+                  },
+                  {
+                    "type": "queue",
+                    "object": "sampleQM",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "root"
+                  }
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "complexity": {
+              "complex": {
+                "security": 1
+              },
+              "score": "complex"
+            },
+            "issues": {
+              "warning": 1
+            },
+            "effort": {
+              "security": 2.4,
+              "total": 2.4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dublin",
+      "targets": [
+        {
+          "version": "9.1.0.0",
+          "platform": "ICP",
+          "location": "Private",
+          "runtime": "liberty",
+          "valid": "true",
+          "issues": {
+            "cluster": [
+              {
+                "id": "MQCL01",
+                "title": "Update your DNS after deployment to point to your new QueueManager",
+                "cost": 0.25,
+                "issueOverhead": 0.15,
+                "occurrencesCost": 0.05,
+                "complexityRule": "dns",
+                "solutionText": [
+                  "Channels are configured with Hostnames"
+                ],
+                "severity": "information",
+                "occurrencesFields": {
+                  "cluster": "Cluster",
+                  "channel": "Channel",
+                  "type": "Type"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "cluster": "INVENTORY",
+                    "channel": "INVENTORY.CORK",
+                    "type": "CLUSSDR"
+                  },
+                  {
+                    "cluster": "INVENTORY",
+                    "channel": "TO.DUBLIN",
+                    "type": "CLUSRCVR"
+                  }
+                ]
+              },
+              {
+                "id": "MQCL03",
+                "title": "Contains a Full Repository.  Assess impact to other cluster members.",
+                "cost": 1.0,
+                "issueOverhead": 0.5,
+                "occurrencesCost": 0.5,
+                "complexityRule": "cluster",
+                "solutionText": [
+                  "Update other Cluster members using IPAddresses to use the new IPAddress after migrating"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "cluster": "Cluster"
+                },
+                "occurrencesCount": 1,
+                "occurrences": [
+                  {
+                    "cluster": "INVENTORY"
+                  }
+                ]
+              }
+            ],
+            "security": [
+              {
+                "id": "MQSEC01",
+                "title": "Authentication configured for OS groups. Determine target authentication mechanism.",
+                "cost": 2.4,
+                "issueOverhead": 2.0,
+                "occurrencesCost": 0.2,
+                "complexityRule": "security",
+                "solutionText": [
+                  "Consider impact to clients",
+                  "Alternatives:",
+                  "(1) Port OS config: Migrate Users, Passwords and Groups to the container environment.",
+                  "(2) Adopt LDAP: Configure migrated Queue Manager to use LDAP instead of Operating System based authentication"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "type": "Destination Type",
+                  "object": "Object",
+                  "osObjectType": "OS Object Type",
+                  "osObjectName": "OS Object Name"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "type": "queue",
+                    "object": "Dublin",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "mqm"
+                  },
+                  {
+                    "type": "queue",
+                    "object": "Dublin",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "root"
+                  }
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "complexity": {
+              "simple": {
+                "cluster": 1
+              },
+              "moderate": {
+                "cluster": 1
+              },
+              "complex": {
+                "security": 1
+              },
+              "score": "complex"
+            },
+            "issues": {
+              "information": 1,
+              "warning": 2
+            },
+            "effort": {
+              "cluster": 1.25,
+              "security": 2.4,
+              "total": 3.65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "IBM_QM_MANAGER_LONG_NAME_FOR_QUEUE",
+      "targets": [
+        {
+          "version": "9.1.0.0",
+          "platform": "ICP",
+          "location": "Private",
+          "runtime": "liberty",
+          "valid": "true",
+          "issues": {
+            "security": [
+              {
+                "id": "MQSEC01",
+                "title": "Authentication configured for OS groups. Determine target authentication mechanism.",
+                "cost": 2.4,
+                "issueOverhead": 2.0,
+                "occurrencesCost": 0.2,
+                "complexityRule": "security",
+                "solutionText": [
+                  "Consider impact to clients",
+                  "Alternatives:",
+                  "(1) Port OS config: Migrate Users, Passwords and Groups to the container environment.",
+                  "(2) Adopt LDAP: Configure migrated Queue Manager to use LDAP instead of Operating System based authentication"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "type": "Destination Type",
+                  "object": "Object",
+                  "osObjectType": "OS Object Type",
+                  "osObjectName": "OS Object Name"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "type": "queue",
+                    "object": "IBM_QM_MANAGER_LONG_NAME_FOR_QUEUE",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "mqm"
+                  },
+                  {
+                    "type": "queue",
+                    "object": "IBM_QM_MANAGER_LONG_NAME_FOR_QUEUE",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "root"
+                  }
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "complexity": {
+              "complex": {
+                "security": 1
+              },
+              "score": "complex"
+            },
+            "issues": {
+              "warning": 1
+            },
+            "effort": {
+              "security": 2.4,
+              "total": 2.4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "CCDT",
+      "targets": [
+        {
+          "version": "9.1.0.0",
+          "platform": "ICP",
+          "location": "Private",
+          "runtime": "liberty",
+          "valid": "true",
+          "issues": {
+            "security": [
+              {
+                "id": "MQSEC01",
+                "title": "Authentication configured for OS groups. Determine target authentication mechanism.",
+                "cost": 2.4,
+                "issueOverhead": 2.0,
+                "occurrencesCost": 0.2,
+                "complexityRule": "security",
+                "solutionText": [
+                  "Consider impact to clients",
+                  "Alternatives:",
+                  "(1) Port OS config: Migrate Users, Passwords and Groups to the container environment.",
+                  "(2) Adopt LDAP: Configure migrated Queue Manager to use LDAP instead of Operating System based authentication"
+                ],
+                "severity": "warning",
+                "occurrencesFields": {
+                  "type": "Destination Type",
+                  "object": "Object",
+                  "osObjectType": "OS Object Type",
+                  "osObjectName": "OS Object Name"
+                },
+                "occurrencesCount": 2,
+                "occurrences": [
+                  {
+                    "type": "queue",
+                    "object": "CCDT",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "mqm"
+                  },
+                  {
+                    "type": "queue",
+                    "object": "CCDT",
+                    "osObjectType": "osGroup",
+                    "osObjectName": "root"
+                  }
+                ]
+              }
+            ]
+          },
+          "summary": {
+            "complexity": {
+              "complex": {
+                "security": 1
+              },
+              "score": "complex"
+            },
+            "issues": {
+              "warning": 1
+            },
+            "effort": {
+              "security": 2.4,
+              "total": 2.4
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

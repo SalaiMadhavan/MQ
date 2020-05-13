@@ -1,0 +1,35 @@
+{
+  "installation": {
+    "os": "Linux 3.10.0-862.11.6.el7.x86_64",
+    "level": "p902-L170310",
+    "instPath": "/opt/mqm",
+    "version": "9.0.2.0",
+    "platform": "IBM MQ for Linux (x86-64 platform)",
+    "dataPath": "/var/mqm",
+    "maxCmdLevel": "902",
+    "mode": "64-bit",
+    "licenseType": "Production",
+    "hostname": "cpiAPM",
+    "buildType": "IKAP - (Production)",
+    "name": "IBM MQ",
+    "instName": "Installation1",
+    "primary": "No"
+  },
+  "archive": {
+    "assessmentUnits": [
+      "TRANS_ADV_QM",
+      "sampleQM",
+      "Dublin",
+      "IBM_QM_MANAGER_LONG_NAME_FOR_QUEUE",
+      "CCDT"
+    ],
+    "archiveType": "installation",
+    "dcVersion": "1.9.9",
+    "archiveName": "Installation1",
+    "domain": "messaging",
+    "host": "cpiAPM.mulvm.ie.ibm.com",
+    "archiveInfo": "Version:9.0.2.0",
+    "isVirtual": "false",
+    "middleware": "mq"
+  }
+}

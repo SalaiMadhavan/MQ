@@ -1,0 +1,17 @@
+{
+  "identifier": {
+    "queueManager": "Dublin",
+    "queues": [
+      "AMQ.5BB340CE24485F1E",
+      "INVENTQ"
+    ]
+  },
+  "archiveType": "installation",
+  "dcVersion": "1.9.9",
+  "archiveName": "Installation1",
+  "domain": "messaging",
+  "host": "cpiAPM.mulvm.ie.ibm.com",
+  "isVirtual": "false",
+  "assessmentUnitName": "Dublin",
+  "middleware": "mq"
+}

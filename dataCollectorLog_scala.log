@@ -1,0 +1,311 @@
+07:17:04.019 [main] INFO  com.ibm.liftandshift.Main$ - Transformation Advisor Data Collector version: 1.9.9
+07:17:04.026 [main] INFO  com.ibm.liftandshift.Main$ - COMMAND: -w /opt/IBM/WebSphere/AppServer/ -p AppSrv01 **** **** --verbose 
+07:17:04.026 [main] INFO  com.ibm.liftandshift.Main$ - Java home: /opt/IBM/WebSphere/AppServer/java/8.0/jre
+07:17:04.026 [main] INFO  com.ibm.liftandshift.Main$ - logon user: root
+07:17:04.026 [main] INFO  com.ibm.liftandshift.Main$ - hostname: cpiAPM.mulvm.ie.ibm.com
+07:17:04.026 [main] INFO  com.ibm.liftandshift.Main$ - Max heap size : 2147483648
+07:17:04.027 [main] DEBUG com.ibm.liftandshift.Main$ - verbose: false
+07:17:04.313 [main] DEBUG com.ibm.liftandshift.Main$ - User specified applications are: 
+07:17:04.314 [main] DEBUG com.ibm.liftandshift.Main$ - scanNodeFlag: false
+07:17:04.314 [main] DEBUG com.ibm.liftandshift.Main$ - ignoreMissingSharedLibrary: false
+07:17:04.315 [main] DEBUG com.ibm.liftandshift.Main$ - ignoreMissingBinary: false
+07:17:04.317 [main] INFO  com.ibm.liftandshift.Main$ - PBAR We are doing a permissions check
+07:17:04.354 [main] INFO  com.ibm.liftandshift.Main$ - calling wsadmin
+07:17:25.940 [main] INFO  com.ibm.liftandshift.Main$ - Calling wsadmin for AppSrv01
+07:17:25.949 [main] DEBUG com.ibm.liftandshift.Main$ - propFile: /tmp/AppSrv01Config.props
+07:17:50.502 [main] INFO  com.ibm.liftandshift.Main$ -  Beginning generation of migration artifacts
+07:18:03.863 [main] INFO  com.ibm.liftandshift.Main$ - Collection of configuration information complete
+07:18:03.957 [main] DEBUG c.i.l.websphere.WebSphereProduct - here is the file we're looking for /opt/IBM/WebSphere/AppServer/properties/version/WAS.product
+07:18:04.034 [main] DEBUG c.i.l.websphere.WebSphereProduct - profileRegistry contents are: <profiles>
+    <profile template="/opt/IBM/WebSphere/AppServer/profileTemplates/default" path="/opt/IBM/WebSphere/AppServer/profiles/AppSrv01" name="AppSrv01" isDefault="true" isAReservationTicket="false"/>
+    <profile template="/opt/IBM/WebSphere/AppServer/profileTemplates/default" path="/opt/IBM/WebSphere/AppServer/profiles/AppSrv02" name="AppSrv02" isDefault="false" isAReservationTicket="false"/>
+    <profile template="/opt/IBM/WebSphere/AppServer/profileTemplates/default" path="/opt/IBM/WebSphere/AppServer/profiles/AppSrv03" name="AppSrv03" isDefault="false" isAReservationTicket="false"/>
+    <profile template="/opt/IBM/WebSphere/AppServer/profileTemplates/default" path="/opt/IBM/WebSphere/AppServer/profiles/AppSrv04" name="AppSrv04" isDefault="false" isAReservationTicket="false"/>
+</profiles>
+07:18:04.041 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere profile AppSrv02  will be skipped because its not mentioned by the user.
+07:18:04.041 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere profile AppSrv03  will be skipped because its not mentioned by the user.
+07:18:04.041 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere profile AppSrv04  will be skipped because its not mentioned by the user.
+07:18:04.042 [main] DEBUG c.i.l.websphere.WebSphereProduct - After comparing with input profiles, there are List(WebSphereProfileRegistryEntry(AppSrv01,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01,/opt/IBM/WebSphere/AppServer/profileTemplates/default,List())) profiles to scan
+07:18:04.119 [main] DEBUG c.i.l.websphere.WebSphereProduct - profiles to keep are List(WebSphereProfileRegistryEntry(AppSrv01,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01,/opt/IBM/WebSphere/AppServer/profileTemplates/default,List()))
+07:18:04.136 [main] INFO  c.i.l.websphere.WebSphereProduct - calling wsadmin
+07:18:18.668 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere version found is: 9.0.0.9
+07:18:18.669 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere version found is Some(was90)
+07:18:18.670 [main] INFO  c.i.l.websphere.WebSphereProduct - checking /opt/IBM/WebSphere/AppServer/, AppSrv01
+07:18:36.439 [main] DEBUG c.i.l.websphere.WebSphereProduct - here is the output of managesdk
+07:18:36.440 [main] DEBUG c.i.l.websphere.WebSphereProduct - CWSDK1004I: Profile AppSrv01 :CWSDK1006I: PROFILE_COMMAND_SDK = 8.0_64 CWSDK1008I: Node cpiAPMNode01 SDK name: 8.0_64CWSDK1009I: Server server1 SDK name: 8.0_64CWSDK1001I: Successfully performed the requested managesdk task.
+07:18:36.442 [main] DEBUG c.i.l.websphere.WebSphereProduct - Java version associated with the profile is Some(ibm8)
+07:18:36.445 [main] INFO  c.i.l.w.WebsphereProfileScanner - Discovering applications to scan for profile AppSrv01
+07:18:36.445 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps
+07:18:36.445 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells
+07:18:36.446 [main] DEBUG c.i.l.w.WebsphereProfileScanner - here is the cells: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells
+07:18:36.446 [main] DEBUG c.i.l.w.WebsphereProfileScanner - [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell]
+07:18:36.446 [main] DEBUG c.i.l.w.WebsphereProfileScanner - /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell
+07:18:36.447 [main] DEBUG c.i.l.w.WebsphereProfileScanner - cell folder found /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell
+07:18:36.448 [main] DEBUG c.i.l.w.WebsphereProfileScanner - app folder found /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications
+07:18:36.450 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is isclite.ear
+07:18:36.450 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is WebSphereWSDM.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is ibmasyncrsp.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is p bw.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is FormatterApp.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is MQTTJavascript(1)_war.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is sampleMDB.ear
+07:18:36.451 [main] DEBUG c.ibm.liftandshift.utils.ScalaUtils - Application to check is SampleMDBEJBEAR.ear
+07:18:36.451 [main] INFO  c.i.l.w.WebsphereProfileScanner - All application names belong to profile AppSrv01 are: [isclite.ear, WebSphereWSDM.ear, ibmasyncrsp.ear, p bw.ear, FormatterApp.ear, MQTTJavascript(1)_war.ear, sampleMDB.ear, SampleMDBEJBEAR.ear]
+07:18:36.451 [main] DEBUG c.i.l.w.WebsphereProfileScanner - After comparing with input applications, there are WrappedArray(/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/isclite.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/WebSphereWSDM.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/ibmasyncrsp.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear) applications to scan
+07:18:36.453 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/isclite.ear/isclite.ear for IBM content
+07:18:36.454 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 missing file /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/isclite.ear/isclite.ear
+07:18:36.469 [main] INFO  c.i.l.w.WebsphereProfileScanner - Skip scanning system application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/isclite.ear
+07:18:36.469 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/WebSphereWSDM.ear/WebSphereWSDM.ear for IBM content
+07:18:36.470 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 missing file /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/WebSphereWSDM.ear/WebSphereWSDM.ear
+07:18:36.476 [main] INFO  c.i.l.w.WebsphereProfileScanner - Skip scanning system application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/WebSphereWSDM.ear
+07:18:36.476 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/ibmasyncrsp.ear/ibmasyncrsp.ear for IBM content
+07:18:36.476 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 missing file /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/ibmasyncrsp.ear/ibmasyncrsp.ear
+07:18:36.481 [main] INFO  c.i.l.w.WebsphereProfileScanner - Skip scanning system application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/ibmasyncrsp.ear
+07:18:36.481 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear for IBM content
+07:18:36.482 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 no implementation provided for /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear
+07:18:36.482 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 Customer application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear
+07:18:36.482 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/FormatterApp.ear for IBM content
+07:18:36.483 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 no implementation provided for /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear
+07:18:36.483 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 Customer application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear
+07:18:36.483 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/MQTTJavascript(1)_war.ear for IBM content
+07:18:36.483 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 no implementation provided for /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear
+07:18:36.483 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 Customer application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear
+07:18:36.484 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear for IBM content
+07:18:36.484 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 no implementation provided for /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear
+07:18:36.484 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 Customer application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear
+07:18:36.484 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Checking application /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/SampleMDBEJBEAR.ear for IBM content
+07:18:36.512 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 no implementation provided for /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear
+07:18:36.512 [main] DEBUG c.i.l.w.WebsphereProfileScanner - AppSrv01 Customer application: /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear
+07:18:36.520 [main] DEBUG c.i.l.w.WebsphereProfileScanner - Applications discovered: ArrayBuffer(/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/FormatterApp.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/MQTTJavascript(1)_war.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/SampleMDBEJBEAR.ear)
+07:18:36.760 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere version found is: 9.0.0.9
+07:18:36.760 [main] DEBUG c.i.l.websphere.WebSphereProduct - WebSphere version found is Some(was90)
+07:18:36.760 [main] INFO  c.i.l.websphere.WebSphereProduct - checking /opt/IBM/WebSphere/AppServer/, AppSrv01
+07:18:53.086 [main] DEBUG c.i.l.websphere.WebSphereProduct - here is the output of managesdk
+07:18:53.087 [main] DEBUG c.i.l.websphere.WebSphereProduct - CWSDK1004I: Profile AppSrv01 :CWSDK1006I: PROFILE_COMMAND_SDK = 8.0_64 CWSDK1008I: Node cpiAPMNode01 SDK name: 8.0_64CWSDK1009I: Server server1 SDK name: 8.0_64CWSDK1001I: Successfully performed the requested managesdk task.
+07:18:53.087 [main] DEBUG c.i.l.websphere.WebSphereProduct - Java version associated with the profile is Some(ibm8)
+07:18:53.114 [main] INFO  c.i.l.websphere.WebSphereProfile - Detected profile version of Websphere as: 9.0.0.0
+07:18:53.201 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 sharedLibraries [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/libraries.xml]
+07:18:53.211 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name applicationSL, scope cells:cpiAPMNode01Cell, classPathEntries List(/root/SL)
+07:18:53.213 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name plants, scope cells:cpiAPMNode01Cell, classPathEntries List(/root/SL_plants)
+07:18:53.327 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 variables [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/cpiAPMNode01Cell/p bw.ear/META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/defaultApp/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/wstemp/Script168ed169ecd/workspace/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/servers/server1/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/wstemp/Script168ed169ecd/workspace/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/wstemp/Script168ed169ecd/workspace/cells/cpiAPMNode01Cell/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/wstemp/Script168ed169ecd/workspace/cells/cpiAPMNode01Cell/applications/p bw.ear/deployments/p bw/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/templates/system/nodes/servers/nodeagent/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/templates/servertypes/APPLICATION_SERVER/servers/DeveloperServer/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/templates/servertypes/APPLICATION_SERVER/servers/default/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/templates/servertypes/APPLICATION_SERVER/servers/defaultZOS/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/servers/server1/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/deployments/p bw/variables.xml, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/variables.xml]
+07:18:53.334 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SERVER_LOG_ROOT, scope servers:server1, value ${LOG_ROOT}/server1
+07:18:53.336 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_SERVER_NAME, scope servers:server1, value server1
+07:18:53.347 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name JVM_CACHE, scope nodes:cpiAPMNode01, value 
+07:18:53.347 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name User-defined_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.347 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.348 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_NATIVE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.348 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_TOOLBOX_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.348 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2390_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.349 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name INFORMIX_JCC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.349 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name INFORMIX_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.349 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SYBASE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.350 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name ORACLE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.350 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name CONNECTJDBC_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.350 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MICROSOFT_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.351 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2UNIVERSAL_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.351 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2UNIVERSAL_JDBC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.351 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_NATIVE_JDBC40_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.352 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MICROSOFT_JDBC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.352 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JCC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.352 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JCC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.353 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name PUREQUERY_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.353 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_INSTALL_ROOT, scope nodes:cpiAPMNode01, value /opt/IBM/WebSphere/AppServer
+07:18:53.354 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name USER_INSTALL_ROOT, scope nodes:cpiAPMNode01, value /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+07:18:53.354 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_LIBS_DIR, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/lib
+07:18:53.354 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_PROPS_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/properties
+07:18:53.355 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_TEMP_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/temp
+07:18:53.355 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name APP_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/installedApps
+07:18:53.355 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name LOG_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/logs
+07:18:53.356 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}
+07:18:53.357 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name JAVA_HOME, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/java/8.0
+07:18:53.358 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MQ_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/lib/WMQ
+07:18:53.358 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DEPLOY_TOOL_ROOT, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/deploytool/itp
+07:18:53.359 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name CONNECTOR_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/installedConnectors
+07:18:53.359 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_ETC_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/etc
+07:18:53.360 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name UNIVERSAL_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/universalDriver/lib
+07:18:53.360 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DERBY_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/derby/lib
+07:18:53.361 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_INSTALL_LIBRARY, scope nodes:cpiAPMNode01, value $(was.install.library)
+07:18:53.361 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name LOCALHOST_NAME, scope nodes:cpiAPMNode01, value localhost
+07:18:53.366 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_CELL_NAME, scope cells:cpiAPMNode01Cell, value cpiAPMNode01Cell
+07:18:53.366 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name GRID_JOBLOG_ROOT, scope cells:cpiAPMNode01Cell, value ${USER_INSTALL_ROOT}
+07:18:53.367 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DERBY_JDBC_DRIVER_PATH, scope cells:cpiAPMNode01Cell, value ${WAS_INSTALL_ROOT}/derby/lib
+07:18:53.367 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name GRID_ENDPOINT_DATASOURCE, scope cells:cpiAPMNode01Cell, value jdbc/pgc
+07:18:53.374 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_SERVER_NAME, scope servers:nodeagent, value nodeagent
+07:18:53.377 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SERVER_LOG_ROOT, scope servers:DeveloperServer, value ${LOG_ROOT}/server1
+07:18:53.377 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_SERVER_NAME, scope servers:DeveloperServer, value server1
+07:18:53.382 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SERVER_LOG_ROOT, scope servers:defaultZOS, value ${LOG_ROOT}/server1
+07:18:53.385 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SERVER_LOG_ROOT, scope servers:server1, value ${LOG_ROOT}/server1
+07:18:53.385 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_SERVER_NAME, scope servers:server1, value server1
+07:18:53.393 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name JVM_CACHE, scope nodes:cpiAPMNode01, value 
+07:18:53.393 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name User-defined_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.393 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.394 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_NATIVE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.394 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_TOOLBOX_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.394 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2390_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.395 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name INFORMIX_JCC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.395 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name INFORMIX_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.395 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name SYBASE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.396 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name ORACLE_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.396 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name CONNECTJDBC_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.396 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MICROSOFT_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.397 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2UNIVERSAL_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.397 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2UNIVERSAL_JDBC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.397 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name OS400_NATIVE_JDBC40_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.398 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MICROSOFT_JDBC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.398 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JCC_DRIVER_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.398 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DB2_JCC_DRIVER_NATIVEPATH, scope nodes:cpiAPMNode01, value 
+07:18:53.399 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name PUREQUERY_PATH, scope nodes:cpiAPMNode01, value 
+07:18:53.399 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_INSTALL_ROOT, scope nodes:cpiAPMNode01, value /opt/IBM/WebSphere/AppServer
+07:18:53.399 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name USER_INSTALL_ROOT, scope nodes:cpiAPMNode01, value /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+07:18:53.400 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_LIBS_DIR, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/lib
+07:18:53.400 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_PROPS_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/properties
+07:18:53.401 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_TEMP_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/temp
+07:18:53.401 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name APP_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/installedApps
+07:18:53.401 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name LOG_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/logs
+07:18:53.401 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}
+07:18:53.402 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name JAVA_HOME, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/java/8.0
+07:18:53.402 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name MQ_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/lib/WMQ
+07:18:53.402 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DEPLOY_TOOL_ROOT, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/deploytool/itp
+07:18:53.402 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name CONNECTOR_INSTALL_ROOT, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/installedConnectors
+07:18:53.403 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_ETC_DIR, scope nodes:cpiAPMNode01, value ${USER_INSTALL_ROOT}/etc
+07:18:53.403 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name UNIVERSAL_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/universalDriver/lib
+07:18:53.403 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DERBY_JDBC_DRIVER_PATH, scope nodes:cpiAPMNode01, value ${WAS_INSTALL_ROOT}/derby/lib
+07:18:53.404 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_INSTALL_LIBRARY, scope nodes:cpiAPMNode01, value $(was.install.library)
+07:18:53.404 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name LOCALHOST_NAME, scope nodes:cpiAPMNode01, value localhost
+07:18:53.409 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name WAS_CELL_NAME, scope cells:cpiAPMNode01Cell, value cpiAPMNode01Cell
+07:18:53.410 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name GRID_JOBLOG_ROOT, scope cells:cpiAPMNode01Cell, value ${USER_INSTALL_ROOT}
+07:18:53.410 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name DERBY_JDBC_DRIVER_PATH, scope cells:cpiAPMNode01Cell, value ${WAS_INSTALL_ROOT}/derby/lib
+07:18:53.410 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 name GRID_ENDPOINT_DATASOURCE, scope cells:cpiAPMNode01Cell, value jdbc/pgc
+07:18:53.411 [main] DEBUG c.i.l.websphere.WebSphereProfile - before resolve shared library size is: 2
+07:18:53.413 [main] DEBUG c.i.l.websphere.WebSphereProfile - Converting shared library directories to full jar list
+07:18:53.413 [main] DEBUG c.i.l.websphere.WebSphereProfile - Checking library applicationSL
+07:18:53.414 [main] DEBUG c.i.l.websphere.WebSphereProfile - Checking entry /root/SL
+07:18:53.415 [main] DEBUG c.i.l.websphere.WebSphereProfile - /root/SL is a directory, getting all the jar files
+07:18:53.416 [main] DEBUG c.i.l.websphere.WebSphereProfile - /root/SL contains jars [/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar]
+07:18:53.416 [main] DEBUG c.i.l.websphere.WebSphereProfile - Replacing /root/SL with those jars
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - Shared libraries are now List(SharedLibrary(applicationSL,cells:cpiAPMNode01Cell,List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)), SharedLibrary(plants,cells:cpiAPMNode01Cell,List(/root/SL_plants)))
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - Checking library plants
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - Checking entry /root/SL_plants
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - /root/SL_plants is a directory, getting all the jar files
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - /root/SL_plants contains jars [/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar]
+07:18:53.418 [main] DEBUG c.i.l.websphere.WebSphereProfile - Replacing /root/SL_plants with those jars
+07:18:53.419 [main] DEBUG c.i.l.websphere.WebSphereProfile - Shared libraries are now List(SharedLibrary(applicationSL,cells:cpiAPMNode01Cell,List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)), SharedLibrary(plants,cells:cpiAPMNode01Cell,List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar)))
+07:18:53.419 [main] DEBUG c.i.l.websphere.WebSphereProfile - after resove shared library size is: 2
+07:18:53.453 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 server.xml [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/servers/server1/server.xml]
+07:18:53.498 [main] DEBUG c.i.l.websphere.WebSphereProfile - checking file /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/nodes/cpiAPMNode01/servers/server1/server.xml
+07:18:53.503 [main] DEBUG c.i.l.websphere.WebSphereProfile - this.serverClasspath: Some(List(ClasspathEntry(server1,List())))
+07:18:53.504 [main] DEBUG c.i.l.websphere.WebSphereProfile - Converting classpath directories to full jar list
+07:18:53.637 [main] DEBUG c.i.l.websphere.WebSphereProfile - AppSrv01 Stream(/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/wstemp/Script162954cbe5b/workspace/cells/cpiAPMNode01Cell/cell.xml, ?)
+07:18:53.642 [main] DEBUG c.i.l.websphere.WebSphereProfile - AppSrv01 cellXml, <topology.cell:Cell cellRegistered="false" cellType="STANDALONE" cellDiscoveryProtocol="TCP" name="cpiAPMNode01Cell" xmi:id="Cell_1" xmi:version="2.0" xmlns:topology.cell="http://www.ibm.com/websphere/appserver/schemas/5.0/topology.cell.xmi" xmlns:xmi="http://www.omg.org/XMI">
+  <properties value="true" name="enableAdminAuthorizationCache" xmi:id="Property_1"/>
+  <monitoredDirectoryDeployment pollingInterval="5" enabled="true" xmi:id="MonitoredDirectoryDeployment_1"/>
+  <sessionSecurity xmi:id="SessionSecurity_1">
+    <secureSessionCookie cookiePath="/" cookieName="JSESSIONID" cookieDomain="*" xmi:id="SecureSessionCookie_1"/>
+    <secureSessionCookie cookiePath="/ibm" cookieName="JSESSIONID" cookieDomain="*" xmi:id="SecureSessionCookie_2"/>
+    <secureSessionCookie cookiePath="/" cookieName="SSLJSESSION" cookieDomain="*" xmi:id="SecureSessionCookie_3"/>
+  </sessionSecurity>
+</topology.cell:Cell>
+07:18:53.652 [main] DEBUG c.i.l.websphere.WebSphereProfile - AppSrv01 cellname is cpiAPMNode01Cell
+07:18:53.652 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 cell type STANDALONE
+07:18:53.652 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 standalone server
+07:25:41.156 [main] INFO  c.i.l.websphere.WebSphereProfile - profile has shared library
+07:25:41.162 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 deployments [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/deployments/p bw/deployment.xml]
+07:25:41.171 [main] INFO  c.i.l.websphere.WebSphereProfile - libraries <libraries sharedClassloader="true" libraryName="plants" xmi:id="LibraryRef_1548946788009" xmlns:appdeployment="http://www.ibm.com/websphere/appserver/schemas/5.0/appdeployment.xmi" xmlns:appcfg="http://www.ibm.com/websphere/appserver/schemas/5.0/appcfg.xmi" xmlns:xmi="http://www.omg.org/XMI"/>
+07:25:41.172 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01  p bw.ear sharedLibrary  plants
+07:25:41.173 [main] INFO  c.i.l.websphere.WebSphereProfile - Current sharedLibs Some(List(plants))
+07:25:41.175 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 deployments [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/deployments/FormatterApp/deployment.xml]
+07:25:41.180 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 deployments [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/deployments/MQTTJavascript(1)_war/deployment.xml]
+07:25:41.185 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 deployments [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/deployments/sampleMDB/deployment.xml]
+07:25:41.189 [main] INFO  c.i.l.websphere.WebSphereProfile - libraries <libraries sharedClassloader="true" libraryName="applicationSL" xmi:id="LibraryRef_1548935198761" xmlns:appdeployment="http://www.ibm.com/websphere/appserver/schemas/5.0/appdeployment.xmi" xmlns:xmi="http://www.omg.org/XMI"/>
+07:25:41.190 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01  sampleMDB.ear sharedLibrary  applicationSL
+07:25:41.190 [main] INFO  c.i.l.websphere.WebSphereProfile - Current sharedLibs Some(List(applicationSL))
+07:25:41.191 [main] INFO  c.i.l.websphere.WebSphereProfile - AppSrv01 deployments [/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/deployments/SampleMDBEJBEAR/deployment.xml]
+07:25:41.196 [main] INFO  c.i.l.websphere.WebSphereProfile - find application ArrayBuffer(WebSphereApplication(p bw.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear,true,server1,Some(List(plants)),None), WebSphereApplication(sampleMDB.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear,true,server1,Some(List(applicationSL)),None)) which is using shared libary
+07:25:41.198 [main] INFO  c.i.l.websphere.WebSphereProfile - Found p bw.ear using libraries List(SharedLibrary(plants,cells:cpiAPMNode01Cell,List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar)))
+07:25:41.200 [main] INFO  c.i.l.websphere.WebSphereProfile -  p bw.ear has a shared library SharedLibrary(plants,cells:cpiAPMNode01Cell,List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar)) with files List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar)
+07:25:41.201 [main] INFO  c.i.l.websphere.WebSphereProfile - Adding classpath info for p bw.ear
+07:25:41.201 [main] INFO  c.i.l.websphere.WebSphereProfile -  p bw.ear must add the jars List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar) from the classpath
+07:25:41.245 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/derby.jar into tmp archive
+07:25:41.529 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/pbw-lib.jar into tmp archive
+07:25:41.584 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ into tmp archive
+07:25:41.584 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/MANIFEST.MF into tmp archive
+07:25:41.586 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibm-application-bnd.xml into tmp archive
+07:25:41.586 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/application_merged.xml into tmp archive
+07:25:41.587 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/ into tmp archive
+07:25:41.587 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/pbw-lib.jar into tmp archive
+07:25:41.589 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/ into tmp archive
+07:25:41.590 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/ into tmp archive
+07:25:41.590 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/ into tmp archive
+07:25:41.590 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/ into tmp archive
+07:25:41.591 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/ into tmp archive
+07:25:41.591 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/ into tmp archive
+07:25:41.591 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/defaultApp/ into tmp archive
+07:25:41.592 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/defaultApp/deployment.xml into tmp archive
+07:25:41.592 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/defaultApp/resources.xml into tmp archive
+07:25:41.597 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/applications/defaultApp/deployments/defaultApp/variables.xml into tmp archive
+07:25:41.597 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibmconfig/cells/defaultCell/security.xml into tmp archive
+07:25:41.598 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file PlantsByWebSphere.war into tmp archive
+07:25:42.001 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/maven/ into tmp archive
+07:25:42.002 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/maven/com.ibm.websphere.pbw/ into tmp archive
+07:25:42.002 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/maven/com.ibm.websphere.pbw/pbw-ear/ into tmp archive
+07:25:42.002 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/maven/com.ibm.websphere.pbw/pbw-ear/pom.xml into tmp archive
+07:25:42.003 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/maven/com.ibm.websphere.pbw/pbw-ear/pom.properties into tmp archive
+07:25:42.005 [main] INFO  c.i.l.websphere.WebSphereProfile - Found sampleMDB.ear using libraries List(SharedLibrary(applicationSL,cells:cpiAPMNode01Cell,List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)))
+07:25:42.006 [main] INFO  c.i.l.websphere.WebSphereProfile -  sampleMDB.ear has a shared library SharedLibrary(applicationSL,cells:cpiAPMNode01Cell,List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)) with files List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)
+07:25:42.006 [main] INFO  c.i.l.websphere.WebSphereProfile - Adding classpath info for sampleMDB.ear
+07:25:42.006 [main] INFO  c.i.l.websphere.WebSphereProfile -  sampleMDB.ear must add the jars List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar) from the classpath
+07:25:42.007 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/ivtEJB.jar into tmp archive
+07:25:42.012 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/pbw-lib.jar into tmp archive
+07:25:42.014 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/slave.jar into tmp archive
+07:25:42.069 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file lib/com.ibm.kgshlib-1.0.0.jar into tmp archive
+07:25:42.072 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ into tmp archive
+07:25:42.072 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/MANIFEST.MF into tmp archive
+07:25:42.073 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/ibm-application-bnd.xml into tmp archive
+07:25:42.073 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file META-INF/application_merged.xml into tmp archive
+07:25:42.074 [main] DEBUG c.i.l.websphere.WebSphereProfile - copying file pishopExampleReplyMDB.jar into tmp archive
+07:25:42.077 [main] INFO  c.i.l.websphere.WebSphereProfile - merged application ArrayBuffer(/tmp/p bw.ear, /tmp/sampleMDB.ear) will be used for inventory scan
+07:32:24.202 [main] DEBUG com.ibm.liftandshift.Main$ - Generating assessment unit json file based on appInfo: WebSphereApplication(p bw.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear,true,server1,Some(List(plants)),Some(/tmp/p bw.ear))
+07:32:24.280 [main] DEBUG com.ibm.liftandshift.Main$ - Shared library Jar: [pbw-lib.jar]
+07:32:24.280 [main] INFO  com.ibm.liftandshift.Main$ - Set does not contain key: AppSrv01_plants_pbw-lib.jar
+07:32:24.355 [main] DEBUG com.ibm.liftandshift.Main$ - Generating assessment unit json file based on appInfo: WebSphereApplication(FormatterApp.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/FormatterApp.ear,false,server1,None,None)
+07:32:24.384 [main] DEBUG com.ibm.liftandshift.Main$ - destination: jms/myTopic
+07:32:24.387 [main] INFO  com.ibm.liftandshift.Main$ - queJndi: jms/wasQueue
+07:32:24.388 [main] INFO  com.ibm.liftandshift.Main$ - topicJndi: jms/myTopic
+07:32:24.388 [main] DEBUG com.ibm.liftandshift.Main$ - topicName: T1
+07:32:24.390 [main] DEBUG com.ibm.liftandshift.Main$ - baseQueueManagerName >>sampleMQ
+07:32:24.390 [main] DEBUG com.ibm.liftandshift.Main$ - baseQueueName >>myQueue
+07:32:24.394 [main] DEBUG com.ibm.liftandshift.Main$ - QM Key = sampleMQ
+07:32:24.416 [main] DEBUG com.ibm.liftandshift.Main$ - Generating assessment unit json file based on appInfo: WebSphereApplication(MQTTJavascript(1)_war.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/MQTTJavascript(1)_war.ear,false,server1,None,None)
+07:32:24.431 [main] DEBUG com.ibm.liftandshift.Main$ - Generating assessment unit json file based on appInfo: WebSphereApplication(sampleMDB.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear,true,server1,Some(List(applicationSL)),Some(/tmp/sampleMDB.ear))
+07:32:24.436 [main] DEBUG com.ibm.liftandshift.Main$ - Shared library Jar: [ivtEJB.jar]
+07:32:24.436 [main] INFO  com.ibm.liftandshift.Main$ - Set does not contain key: AppSrv01_applicationSL_ivtEJB.jar
+07:32:24.446 [main] DEBUG com.ibm.liftandshift.Main$ - destination: jms/wasQueue
+07:32:24.446 [main] INFO  com.ibm.liftandshift.Main$ - queJndi: jms/wasQueue
+07:32:24.447 [main] DEBUG com.ibm.liftandshift.Main$ - queueName: MYQUEUE
+07:32:24.449 [main] DEBUG com.ibm.liftandshift.Main$ - baseQueueManagerName >>sampleMQ
+07:32:24.449 [main] DEBUG com.ibm.liftandshift.Main$ - baseQueueName >>myQueue
+07:32:24.449 [main] DEBUG com.ibm.liftandshift.Main$ - QM Key = sampleQM
+07:32:24.449 [main] DEBUG com.ibm.liftandshift.Main$ - QM Key = sampleMQ
+07:32:24.456 [main] DEBUG com.ibm.liftandshift.Main$ - Generating assessment unit json file based on appInfo: WebSphereApplication(SampleMDBEJBEAR.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/SampleMDBEJBEAR.ear,false,server1,None,None)
+07:33:42.509 [main] INFO  com.ibm.liftandshift.Main$ - Profile:AppSrv01 context roots:Some(Map(p bw.ear -> {}, MQTTJavascript(1)_war.ear -> {MQTTJavascript(1).war=/MQTTJavascript}))
+07:33:42.604 [main] DEBUG com.ibm.liftandshift.Main$ - WebSphereProduct(Stream(WebSphereProductInfo(IBM WebSphere Application Server,BASE,9.0.0.9,9/6/18,cf091835.02), ?),List(WebSphereProfile(AppSrv01,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01,cpiAPMNode01Cell,None,None,None,None,ArrayBuffer(/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/FormatterApp.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/MQTTJavascript(1)_war.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear, /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/SampleMDBEJBEAR.ear),ArrayBuffer(WebSphereApplication(p bw.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/p bw.ear/p bw.ear,true,server1,Some(List(plants)),Some(/tmp/p bw.ear)), WebSphereApplication(FormatterApp.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/FormatterApp.ear/FormatterApp.ear,false,server1,None,None), WebSphereApplication(MQTTJavascript(1)_war.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/MQTTJavascript(1)_war.ear/MQTTJavascript(1)_war.ear,false,server1,None,None), WebSphereApplication(sampleMDB.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/sampleMDB.ear/sampleMDB.ear,true,server1,Some(List(applicationSL)),Some(/tmp/sampleMDB.ear)), WebSphereApplication(SampleMDBEJBEAR.ear,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/cpiAPMNode01Cell/applications/SampleMDBEJBEAR.ear/SampleMDBEJBEAR.ear,false,server1,None,None)),None,true,Some(was90),Some(ibm8),true,Some(List(SharedLibrary(applicationSL,cells:cpiAPMNode01Cell,List(/root/SL/ivtEJB.jar, /root/SL/pbw-lib.jar, /root/SL/slave.jar, /root/SL/com.ibm.kgshlib-1.0.0.jar)), SharedLibrary(plants,cells:cpiAPMNode01Cell,List(/root/SL_plants/derby.jar, /root/SL_plants/pbw-lib.jar)))),Some(List()),Some(List(WebSphereVariable(SERVER_LOG_ROOT,servers:server1,${LOG_ROOT}/server1), WebSphereVariable(WAS_SERVER_NAME,servers:server1,server1), WebSphereVariable(WAS_INSTALL_ROOT,nodes:cpiAPMNode01,/opt/IBM/WebSphere/AppServer), WebSphereVariable(USER_INSTALL_ROOT,nodes:cpiAPMNode01,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01), WebSphereVariable(WAS_LIBS_DIR,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/lib), WebSphereVariable(WAS_PROPS_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/properties), WebSphereVariable(WAS_TEMP_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/temp), WebSphereVariable(APP_INSTALL_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/installedApps), WebSphereVariable(LOG_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/logs), WebSphereVariable(DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}), WebSphereVariable(JAVA_HOME,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/java/8.0), WebSphereVariable(MQ_INSTALL_ROOT,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/lib/WMQ), WebSphereVariable(DEPLOY_TOOL_ROOT,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/deploytool/itp), WebSphereVariable(CONNECTOR_INSTALL_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/installedConnectors), WebSphereVariable(WAS_ETC_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/etc), WebSphereVariable(UNIVERSAL_JDBC_DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/universalDriver/lib), WebSphereVariable(DERBY_JDBC_DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/derby/lib), WebSphereVariable(WAS_INSTALL_LIBRARY,nodes:cpiAPMNode01,$(was.install.library)), WebSphereVariable(LOCALHOST_NAME,nodes:cpiAPMNode01,localhost), WebSphereVariable(WAS_CELL_NAME,cells:cpiAPMNode01Cell,cpiAPMNode01Cell), WebSphereVariable(GRID_JOBLOG_ROOT,cells:cpiAPMNode01Cell,${USER_INSTALL_ROOT}), WebSphereVariable(DERBY_JDBC_DRIVER_PATH,cells:cpiAPMNode01Cell,${WAS_INSTALL_ROOT}/derby/lib), WebSphereVariable(GRID_ENDPOINT_DATASOURCE,cells:cpiAPMNode01Cell,jdbc/pgc), WebSphereVariable(WAS_SERVER_NAME,servers:nodeagent,nodeagent), WebSphereVariable(SERVER_LOG_ROOT,servers:DeveloperServer,${LOG_ROOT}/server1), WebSphereVariable(WAS_SERVER_NAME,servers:DeveloperServer,server1), WebSphereVariable(SERVER_LOG_ROOT,servers:defaultZOS,${LOG_ROOT}/server1), WebSphereVariable(SERVER_LOG_ROOT,servers:server1,${LOG_ROOT}/server1), WebSphereVariable(WAS_SERVER_NAME,servers:server1,server1), WebSphereVariable(WAS_INSTALL_ROOT,nodes:cpiAPMNode01,/opt/IBM/WebSphere/AppServer), WebSphereVariable(USER_INSTALL_ROOT,nodes:cpiAPMNode01,/opt/IBM/WebSphere/AppServer/profiles/AppSrv01), WebSphereVariable(WAS_LIBS_DIR,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/lib), WebSphereVariable(WAS_PROPS_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/properties), WebSphereVariable(WAS_TEMP_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/temp), WebSphereVariable(APP_INSTALL_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/installedApps), WebSphereVariable(LOG_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/logs), WebSphereVariable(DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}), WebSphereVariable(JAVA_HOME,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/java/8.0), WebSphereVariable(MQ_INSTALL_ROOT,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/lib/WMQ), WebSphereVariable(DEPLOY_TOOL_ROOT,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/deploytool/itp), WebSphereVariable(CONNECTOR_INSTALL_ROOT,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/installedConnectors), WebSphereVariable(WAS_ETC_DIR,nodes:cpiAPMNode01,${USER_INSTALL_ROOT}/etc), WebSphereVariable(UNIVERSAL_JDBC_DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/universalDriver/lib), WebSphereVariable(DERBY_JDBC_DRIVER_PATH,nodes:cpiAPMNode01,${WAS_INSTALL_ROOT}/derby/lib), WebSphereVariable(WAS_INSTALL_LIBRARY,nodes:cpiAPMNode01,$(was.install.library)), WebSphereVariable(LOCALHOST_NAME,nodes:cpiAPMNode01,localhost), WebSphereVariable(WAS_CELL_NAME,cells:cpiAPMNode01Cell,cpiAPMNode01Cell), WebSphereVariable(GRID_JOBLOG_ROOT,cells:cpiAPMNode01Cell,${USER_INSTALL_ROOT}), WebSphereVariable(DERBY_JDBC_DRIVER_PATH,cells:cpiAPMNode01Cell,${WAS_INSTALL_ROOT}/derby/lib), WebSphereVariable(GRID_ENDPOINT_DATASOURCE,cells:cpiAPMNode01Cell,jdbc/pgc))),Some(ArchiveInfo(javaAppServer,AppSrv01,profile,ArrayBuffer(p bw.ear, FormatterApp.ear, MQTTJavascript(1)_war.ear, sampleMDB.ear, SampleMDBEJBEAR.ear),1.9.9,was,cpiAPM.mulvm.ie.ibm.com)),Some(Map(p bw.ear -> {}, MQTTJavascript(1)_war.ear -> {MQTTJavascript(1).war=/MQTTJavascript})))),[Ljava.lang.String;@a98c161,false,false,false)
+07:33:42.769 [main] DEBUG c.i.l.websphere.WebSphereProduct - here is the file we're looking for /opt/IBM/WebSphere/AppServer/properties/version/JAVA8.product
+07:33:42.944 [main] INFO  com.ibm.liftandshift.Main$ - Done collecting transformation data.
+07:33:51.375 [main] DEBUG com.ibm.liftandshift.Main$ - Loading Connection Details: /root/automation/DC/transformationadvisor-1.9.9/bin/..//../uploadEndpoint.json
+07:33:51.416 [main] DEBUG com.ibm.liftandshift.Main$ - JObject(List((workspace,JString(cf7278d7-a60d-408d-80bd-f347504855e8)), (uploadEndpoint,JString(http://9.162.163.213:2220/lands_advisor/advisor/landsw/upload?collection=0b195349-eb77-472a-9639-51414df03f5a&uploadKey=2h9g7qcubrspi8vrd83rc8itlh5pna3h))))
+07:33:59.147 [main] INFO  com.ibm.liftandshift.Main$ - Here is the response from the Transformation Advisor server: Thank you for uploading your data. You can proceed to the application UI for doing further analysis.
+07:33:59.165 [main] DEBUG com.ibm.liftandshift.Main$ - Loading Connection Details: /root/automation/DC/transformationadvisor-1.9.9/bin/..//../uploadEndpoint.json
+07:33:59.165 [main] DEBUG com.ibm.liftandshift.Main$ - JObject(List((workspace,JString(cf7278d7-a60d-408d-80bd-f347504855e8)), (uploadEndpoint,JString(http://9.162.163.213:2220/lands_advisor/advisor/landsw/upload?collection=0b195349-eb77-472a-9639-51414df03f5a&uploadKey=2h9g7qcubrspi8vrd83rc8itlh5pna3h))))
+07:34:05.273 [main] INFO  com.ibm.liftandshift.Main$ - Here is the response from the Transformation Advisor server: Thank you for uploading your data. You can proceed to the application UI for doing further analysis.
+07:34:05.293 [main] DEBUG com.ibm.liftandshift.Main$ - Loading Connection Details: /root/automation/DC/transformationadvisor-1.9.9/bin/..//../uploadEndpoint.json
+07:34:05.293 [main] DEBUG com.ibm.liftandshift.Main$ - JObject(List((workspace,JString(cf7278d7-a60d-408d-80bd-f347504855e8)), (uploadEndpoint,JString(http://9.162.163.213:2220/lands_advisor/advisor/landsw/upload?collection=0b195349-eb77-472a-9639-51414df03f5a&uploadKey=2h9g7qcubrspi8vrd83rc8itlh5pna3h))))
+07:34:10.077 [main] INFO  com.ibm.liftandshift.Main$ - Here is the response from the Transformation Advisor server: Thank you for uploading your data. You can proceed to the application UI for doing further analysis.
+07:39:48.999 [main] INFO  com.ibm.liftandshift.Main$ - Transformation Advisor Data Collector version: 1.9.9
+07:39:49.006 [main] INFO  com.ibm.liftandshift.Main$ - COMMAND: -m all --verbose 
+07:39:49.006 [main] INFO  com.ibm.liftandshift.Main$ - Java home: /root/automation/DC/transformationadvisor-1.9.9/jre
+07:39:49.006 [main] INFO  com.ibm.liftandshift.Main$ - logon user: root
+07:39:49.006 [main] INFO  com.ibm.liftandshift.Main$ - hostname: cpiAPM.mulvm.ie.ibm.com
+07:39:49.006 [main] INFO  com.ibm.liftandshift.Main$ - Max heap size : 2147483648
+07:39:49.007 [main] DEBUG com.ibm.liftandshift.Main$ - verbose: false
+07:39:49.008 [main] DEBUG com.ibm.liftandshift.Main$ - User specified applications are: 
+07:39:49.011 [main] DEBUG com.ibm.liftandshift.Main$ - first parameter is all
