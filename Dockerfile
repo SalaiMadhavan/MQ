@@ -20,7 +20,7 @@ MAINTAINER Arthur Barr <arthur.barr@uk.ibm.com>
 ARG MQ_URL=http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/mqadv_dev90_linux_x86-64.tar.gz
 
 # The MQ packages to install
-ARG MQ_PACKAGES="MQSeriesRuntime-*.rpm MQSeriesServer-*.rpm MQSeriesMsg*.rpm MQSeriesJava*.rpm MQSeriesJRE*.rpm MQSeriesGSKit*.rpm"
+ARG MQ_PACKAGES="MQSeriesClient-*.rpm"
 
 RUN export DEBIAN_FRONTEND=noninteractive \
   # Optional: Update the command prompt
