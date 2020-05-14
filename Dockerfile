@@ -18,5 +18,5 @@ FROM ubuntu:14.04
 
 RUN export MQSERVER="SYSTEM.DEF.SVRCONN/TCP/mq-route5-mq.appmod-icp4i-59b8151a0c2c6c9970325727160f3ee1-0001.us-east.containers.appdomain.cloud(30255)" \
   && echo $MQSERVER \
-  && cd /workspace/git-repo/
+  && cd /workspace/git-repo/ \
   && ls
