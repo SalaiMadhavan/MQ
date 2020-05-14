@@ -64,6 +64,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
   && rm -rf /tmp/mq \
   && rm -rf /var/lib/apt/lists/*
 
-RUN MQSERVER="SYSTEM.DEF.SVRCONN/TCP/mq-route5-mq.appmod-icp4i-59b8151a0c2c6c9970325727160f3ee1-0001.us-east.containers.appdomain.cloud(32327)"
+RUN export MQSERVER="SYSTEM.DEF.SVRCONN/TCP/mq-route5-mq.appmod-icp4i-59b8151a0c2c6c9970325727160f3ee1-0001.us-east.containers.appdomain.cloud(30255)"
 
-RUN runmqsc -w 60 ammq5
+RUN runmqsc -v Dublin.mqsc
